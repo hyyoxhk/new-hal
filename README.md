@@ -9,6 +9,7 @@ similar to Android's hal layer code, but I want to use c code realize it and
 integrate it on yocto. I have read the code of the linux driver layer and u
 nderstood part of the coding ideas. I think use that mode to implement my hal layer
 
+```c
 struct hal_driver {
 	bool (*load)();
 	bool (*unload)();
@@ -18,3 +19,4 @@ struct hal_driver {
 struct hal {
 	struct hal_driver *driver;
 };
+```
