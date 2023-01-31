@@ -19,4 +19,6 @@ struct hal_driver {
 struct hal {
 	struct hal_driver *driver;
 };
+
+hal_register();
 ```
