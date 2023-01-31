@@ -11,6 +11,8 @@ understood part of the coding ideas. I think use that mode to implement my hal l
 
 ```c
 struct hal_driver {
+	const char *name;
+	const char *mod_name;
 	bool (*load)();
 	bool (*unload)();
 	bool (*isload)();
@@ -20,5 +22,5 @@ struct hal {
 	struct hal_driver *driver;
 };
 
-hal_register();
+hal_register(struct hal *hal);
 ```
